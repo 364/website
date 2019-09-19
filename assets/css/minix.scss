@@ -1,0 +1,134 @@
+// 栅格系统
+$grid-columns: 12;
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+.row {
+  display: flex;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include make-col($i, $grid-columns);
+  }
+}
+
+
+// 文字超出省略号
+@mixin ellipsis($clamp: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($clamp == 1) {
+    white-space: nowrap;
+  } @else {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// 定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 定位上下居中
+@mixin centerV {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位左右居中
+@mixin centerH {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 宽高顶位置左位置
+@mixin whtl($width, $height, $top, $left) {
+  width: $width;
+  height: $height;
+  top: $top;
+  left: $left;
+}
+
+// 宽高顶位置右位置
+@mixin whtr($width, $height, $top, $right) {
+  width: $width;
+  height: $height;
+  top: $top;
+  right: $right;
+}
+
+// 宽高底位置左位置
+@mixin whbl($width, $height, $bottom, $left) {
+  width: $width;
+  height: $height;
+  bottom: $bottom;
+  left: $left;
+}
+
+// 宽高底位置右位置
+@mixin whbr($width, $height, $bottom, $right) {
+  width: $width;
+  height: $height;
+  bottom: $bottom;
+  right: $right;
+}
+
+// 字体大小、行高、字体
+@mixin font($size, $line-height, $family: "Microsoft YaHei") {
+  font: #{$size}/#{$line-height} $family;
+}
+
+// 字体大小，颜色
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+// 计算rem的基准字体
+$rem-base-font-size: 64px;
+
+// UI设计图的分辨率宽度
+$UI-resolution-width: 1440px;
+
+// 需要适配的屏幕宽度
+$device-widths: 320px, 360px, 375px, 412px, 480px, 540px, 640px, 720px, 750px, 768px,
+  1024px,1366px, 1440px;
+
+  
+// 将设计图标注的px尺寸，转换为相应的CSS
+@function px($px) {
+  @return $px / $rem-base-font-size * 1rem;
+}
+
+@mixin html-font-size() {
+  @each $current-width in $device-widths {
+    @media screen and (min-width: $current-width) {
+      html{
+        $x: $UI-resolution-width / $current-width;  // 计算出是几倍屏
+        font-size: $rem-base-font-size / $x;
+      }
+    }
+  }
+}
+@include html-font-size();

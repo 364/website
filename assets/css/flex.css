@@ -1,0 +1,16 @@
+.flex{
+  display: flex;
+}
+.flex-center{
+  align-items: center;
+  justify-content:center;
+}
+.flex-between{
+  justify-content: space-between
+}
+.flex-around{
+  justify-content: space-around
+}
+.flex-warp{
+  flex-wrap: wrap;
+}
