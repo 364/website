@@ -44,18 +44,18 @@ export default [
       {
         title: "产品品类",
         subtitle: "Product Categoryb",
-        url:'3-1.png',
+        url:'3-2.png',
         link:'/business#2',
       },
       {
         title: "经营模式",
-        url:'3-1.png',
+        url:'3-3.png',
         link:'/business#3',
         subtitle: "Business Model"
       },
       {
         title: "供应商招募",
-        url:'3-1.png',
+        url:'3-4.png',
         link:'/business#4',
         subtitle: "Supplier Recruitment"
       }
@@ -74,13 +74,13 @@ export default [
       },
       {
         title: "晋升通道",
-        url:'4-1.png',
+        url:'4-2.png',
         link:'/join#2',
         subtitle: "Promotion Channel"
       },
       {
         title: "活力喜鹊",
-        url:'4-1.png',
+        url:'4-3.png',
         link:'/join#3',
         subtitle: "Vitality Cuckoo"
       }

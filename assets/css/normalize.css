@@ -349,7 +349,7 @@ template {
   display: none;
 }
 
-ul{
+ol,ul{
   padding: 0;
 }
 
@@ -401,11 +401,4 @@ body {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
-
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s;
-}
-.page-enter, .page-leave-active {
-  opacity: 0;
 }

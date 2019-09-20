@@ -89,6 +89,7 @@ export default {
     }
     .copyright{
       padding: px(20px) px(50px);
+      text-align: center;
       opacity: 0.5;      
       font-size: px(12px);
     }

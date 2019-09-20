@@ -126,7 +126,8 @@ export default {
     }
   }
   .spaces{
-    height: px(102px);
+    height: px(70px);
+    background: #fff;
   }
 }
 @media screen and (max-width: 640px) {

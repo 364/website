@@ -12,22 +12,22 @@ export default [
       {
         id: 3,
         title: "公司简介",
-        url: "/about#1"
+        url: "/about#0"
       },
       {
         id: 4,
         title: "发展历程",
-        url: "/about#2"
+        url: "/about#1"
       },
       {
         id: 5,
         title: "企业文化",
-        url: "/about#3"
+        url: "/about#2"
       },
       {
         id: 6,
         title: "企业资讯",
-        url: "/about#4"
+        url: "/about#3"
       }
     ]
   },
@@ -39,22 +39,22 @@ export default [
       {
         id: 8,
         title: "业务范围",
-        url: "/business#1"
+        url: "/business#0"
       },
       {
         id: 9,
         title: "产品品类",
-        url: "/businesss#2"
+        url: "/business#1"
       },
       {
         id: 10,
         title: "经营模式",
-        url: "/businesss#3"
+        url: "/business#2"
       },
       {
         id: 11,
         title: "供应商招募",
-        url: "/businesss#4"
+        url: "/business#3"
       }
     ]
   },
@@ -66,17 +66,17 @@ export default [
       {
         id: 13,
         title: "人在喜鹊",
-        url: "/join#1"
+        url: "/join#0"
       },
       {
         id: 14,
         title: "社会招聘",
-        url: "/join#2"
+        url: "/join#1"
       },
       {
         id: 15,
         title: "校园招聘",
-        url: "/join#3"
+        url: "/join#2"
       }
     ]
   },
